@@ -1,0 +1,7 @@
+@import 'variables';
+@import 'normalize';
+@import 'mixins';
+@import 'devices/mobile';
+
+// @import is when you are going to call a file 
+// @include is when you are going to use a mixin
