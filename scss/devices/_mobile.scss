@@ -1,8 +1,79 @@
 @media (min-width: 300px) {
 
+    header {
+        @include flexBox(column,center,center,nowrap,20px);
+        @include bgPic($picHeader);
+        height: 84vh;
+
+        h1, p {
+            width: 60%;
+            color: white;
+            text-align: center;
+        }
+
+        [type="text"] {
+            width: 15%;
+            padding: 3%;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            background-color: transparent;
+            border: 3px solid white;
+        }
+
+        [type="submit"] {
+            width: 25%;
+            padding: 3%;
+            color: white;
+            font-weight: 600;
+            background-color: $bgColorLightBlue;
+        }
+    }
+
+    .service {
+        height: 60vh;
+        background-color: $bgColorLightGray;
+        @include flexBox(column,center,center,nowrap);
+
+        .service-box-1 {
+            width: 40%;
+            padding: 10%;
+            background-color: white;
+            @include flexBox(column,center,center,nowrap);
+        }
+
+        aside {
+            width: 10vh;
+            height: 10vh;
+            font-size: 30px;
+            color: $color-1;
+            border: 2px solid $color-1;
+            border-radius: 50%;
+            @include flexBox(column,center,center,nowrap);
+        }
+
+        h3 {
+            padding-top: 20%;
+            padding-bottom: 20%;
+        }
+    }
+
     .grid-gallery {
-        @include flexBox(column,center,center,wrap);
         padding: 2%;
+
+        .line-gallery-1 {
+            @include flexBox(column,center,center,nowrap);
+            text-align: center;
+
+            div {
+                width: 40%;
+                padding: 10%;
+            }
+
+            .topic {
+                border-bottom: 2px solid lightgrey;
+            }
+        }
 
         .gallery-bottom {
             padding: 2%;
@@ -79,7 +150,7 @@
         padding: 3%;
         @include flexBox(column,center,center,nowrap);
 
-        > p { // ensure that it's a directly kid from the contact
+        > p { // " > " ensure that it's a directly kid from the contact
             width: 100%;
             text-align: center;
             padding: 10% 0% 10% 0%;
